@@ -1,0 +1,38 @@
+.estado {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    display: inline-block;
+    margin: 5px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    pointer-events: none;
+    text-align: center;
+}
+
+.contacto { background: #6c757d; }
+.seguimiento { background: #198021; }
+.cita { background: #007bff; }
+.visita { background: #ffc107; color: black; }
+.separacion { background: #28a745; }
+.cierre { background: #17a2b8; }
+@media (max-width: 768px) {
+  .tbl-details td:nth-child(1)::before {
+    content: "#";
+  }
+  .tbl-details td:nth-child(2)::before {
+    content: "Asesor";
+  }
+  .tbl-details td:nth-child(3)::before {
+    content: "Cliente";
+  }
+  .tbl-details td:nth-child(4)::before {
+    content: "Proyecto";
+  }
+  .tbl-details td:nth-child(5)::before {
+    content: "Celular";
+  }
+}
+

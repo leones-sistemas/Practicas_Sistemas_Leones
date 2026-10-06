@@ -1,0 +1,69 @@
+.contenedor{
+    margin: 15px;
+    padding:20px;
+    background:#1f2937;
+    border-radius:20px;
+    box-shadow:0 20px 40px rgba(0,0,0,.4);
+    display: flex;
+    place-items: center;
+    flex-direction: column;
+    gap: 5px;
+}
+.contenedor h4{
+  color: #fff;
+  text-align: center;
+}
+.switch-radio{
+    position:relative;
+    display:flex;
+    width:230px;
+    background:#374151;
+    border-radius:60px;
+    overflow:hidden;
+}
+
+.switch-radio input{
+    display:none;
+}
+
+.switch-radio label{
+    flex:1;
+    text-align:center;
+    padding:6px 0;
+    cursor:pointer;
+    z-index:2;
+    font-weight:bold;
+    color:#cbd5e1;
+    transition:.35s;
+    user-select:none;
+}
+
+.slider{
+    position:absolute;
+    width:50%;
+    height:100%;
+    background:linear-gradient(135deg,#81220b,#F1C006);
+    border-radius:60px;
+    left:0;
+    top:0;
+    transition:.35s cubic-bezier(.68,-0.55,.27,1.55);
+    box-shadow:
+        0 10px 25px rgba(37,99,235,.4),
+        inset 0 0 15px rgba(255,255,255,.2);
+}
+
+#op1:checked ~ .slider{
+    left:0%;
+}
+
+#op2:checked ~ .slider{
+    left:50%;
+}
+
+#op1:checked + label{
+    color:white;
+}
+
+#op2:checked + label{
+    color:white;
+}

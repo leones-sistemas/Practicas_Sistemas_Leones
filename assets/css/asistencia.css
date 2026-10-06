@@ -1,0 +1,362 @@
+:root{
+
+    --bg:#f8fafc;
+    --card:#ffffff;
+
+    --primary:#1e3a5f;
+    --accent:#0ea5e9;
+
+    --success:#16a34a;
+    --danger:#dc2626;
+
+    --text:#0f172a;
+    --muted:#64748b;
+
+    --border:#e2e8f0;
+
+    --shadow:
+        0 20px 50px rgba(15,23,42,.08);
+}
+/* ==================================================
+   CONTENEDOR
+================================================== */
+
+.map-container,
+.registros-container{
+
+    max-width:1300px;
+
+    margin:40px auto;
+
+    background:var(--card);
+
+    border-radius:32px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+    border:1px solid var(--border);
+}
+
+/* ==================================================
+   CABECERA
+================================================== */
+
+.map-container h2,
+.registros-titulo{
+
+    margin:0;
+
+    padding:35px;
+
+    text-align:center;
+
+    font-size:34px;
+
+    font-weight:800;
+
+    color:var(--primary);
+
+    position:relative;
+}
+
+.map-container h2::after,
+.registros-titulo::after{
+
+    content:"";
+
+    display:block;
+
+    width:90px;
+
+    height:5px;
+
+    margin:15px auto 0;
+
+    border-radius:20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--primary),
+            var(--accent)
+        );
+}
+
+/* ==================================================
+   ESTADO
+================================================== */
+
+#estado{
+
+    margin:25px;
+
+    background:white;
+
+    border-radius:22px;
+
+    border:1px solid var(--border);
+
+    padding:25px;
+
+    position:relative;
+}
+
+.info-container{
+
+    text-align:center;
+
+    color:var(--text);
+
+    line-height:2;
+
+    font-size:15px;
+}
+
+/* ==================================================
+   BOTÓN
+================================================== */
+
+.btn-total{
+
+    width:calc(100% - 50px);
+
+    margin:0 25px 25px;
+
+    height:65px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #0ea5e9
+        );
+
+    color:white;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    letter-spacing:.5px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.btn-total:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 15px 35px rgba(37,99,235,.25);
+}
+
+/* ==================================================
+   MAPA
+================================================== */
+
+#map{
+
+    margin:25px;
+
+    height:650px;
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    border:8px solid white;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.08);
+}
+
+.leaflet-container{
+    border-radius:24px;
+}
+
+/* ==================================================
+   REGISTROS
+================================================== */
+
+.registros-card{
+
+    padding:30px;
+
+    display:grid;
+
+    gap:20px;
+}
+
+/* ==================================================
+   ITEMS
+================================================== */
+
+.registro-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    background:white;
+
+    border:1px solid #eef2f7;
+
+    transition:.3s;
+
+    position:relative;
+}
+
+.registro-item:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.08);
+}
+
+/* Etiqueta lateral */
+
+.registro-item::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    top:0;
+
+    width:8px;
+    height:100%;
+
+    border-radius:20px 0 0 20px;
+}
+
+.registro-item.entrada::before{
+
+    background:#16a34a;
+}
+
+.registro-item.salida::before{
+
+    background:#0ea5e9;
+}
+
+/* ==================================================
+   TIPO
+================================================== */
+
+.registro-tipo{
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:var(--primary);
+}
+
+/* ==================================================
+   FECHA
+================================================== */
+
+.registro-fecha{
+
+    color:var(--muted);
+
+    font-size:14px;
+}
+
+/* ==================================================
+   BADGE HORA
+================================================== */
+
+.registro-item::after{
+
+    content:"Registro";
+
+    padding:8px 14px;
+
+    border-radius:30px;
+
+    background:#eff6ff;
+
+    color:#2563eb;
+
+    font-size:12px;
+
+    font-weight:700;
+}
+
+/* ==================================================
+   BOTONES JS
+================================================== */
+
+.success{
+
+    background:#16a34a;
+
+    color:white;
+
+    border:none;
+
+    border-radius:12px;
+
+    padding:12px 24px;
+
+    font-weight:700;
+}
+
+.danger{
+
+    background:#dc2626;
+
+    color:white;
+
+    border:none;
+
+    border-radius:12px;
+
+    padding:12px 24px;
+
+    font-weight:700;
+}
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+
+@media(max-width:768px){
+
+    .map-container,
+    .registros-container{
+
+        margin:15px;
+    }
+
+    #map{
+
+        height:420px;
+    }
+
+    .registro-item{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:10px;
+    }
+}

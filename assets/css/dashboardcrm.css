@@ -1,0 +1,222 @@
+main {
+  padding: 0 !important;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: #0f1226;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 5% 95%;
+  color: #fff;
+  gap: 5px;
+}
+.body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 60% 39%;
+  gap: 5px;
+}
+.body .header {
+  display: grid;
+  grid-template-columns: 80% 19%;
+  grid-template-rows: 100%;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.data-text{
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20% 80%;
+}
+.data-text .text{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 100%;
+}
+.data-text .text p{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-evenly;
+}
+.text p strong{
+    font-size: 26px;
+}
+.text p span{
+    font-weight: 300;
+}
+.comparative{
+    width: auto;
+    height: 100%;
+    border: 4px solid #CE534F;
+    background-color: #3C2642 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.c-red{
+    color:#F44331;
+}
+.c-green{
+    color:#49B644;
+}
+.b-red{
+    border-color:#F44331;
+}
+.b-green{
+    border-color:#49B644;
+}
+.comparative i{
+    font-size: 68px;
+}
+.comparative span{
+    font-size: 24px;
+}
+.resume {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 40% 59%;
+  gap: 5px;
+}
+
+.reaction{
+    background-color: #292952;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    gap: 20px;
+}
+.reaction .det:not(:last-child){
+    border-bottom: 2px solid #42426C;
+}
+.reaction .det{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+}
+.reaction .det i{
+    font-size: 80px;
+    margin-left: 20px;
+}
+.reaction .det:nth-child(1) i{
+    color:#49B644;
+}
+.reaction .det:nth-child(2) i{
+    color:#EDE82F;
+}
+.reaction .det:nth-child(3) i{
+    color:#F44331;
+}
+
+.reaction .det p{
+    margin-right: auto;
+    margin-left: 15px;
+    justify-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.reaction .det p span{
+    font-size: 48px;
+    align-self: flex-start;
+}
+.stats {
+  display: grid;
+  grid-template-columns: 20% 26.50% 26.50% 26.50%;
+  grid-template-rows: 100%;
+  justify-content: space-between;
+  gap: 5px;
+}
+.stats div {
+  background-color: #292952;
+}
+
+.graphs{
+    display: grid;
+    grid-template-columns: repeat(3, 33.33%);
+    grid-template-rows: 100%;
+    gap: 5px;
+}
+.graphs div{
+    background-color: #292952;
+}
+.footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100%;
+    gap: 5px;
+}
+.footer .stats{
+    background-color: #292952;
+}
+
+.graph{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% 90%;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+.graph .graph-container{
+    width: 100%;
+    max-width: 98%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+canvas{
+    border: none;
+}
+.graph h2{
+    font-size: 18px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.search{
+    padding: 45px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.search select{
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+}
+.search h2{
+    margin-bottom: 10px;
+}
+.search select option {
+  color: black;
+}
+
+.conversion{
+    position: relative;
+}
+.conversion strong{
+    position: absolute;
+    bottom: 15px;
+    font-size: 45px;
+}
+
+.select-input{
+
+}

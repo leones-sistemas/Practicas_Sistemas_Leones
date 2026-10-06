@@ -1,0 +1,176 @@
+.actividades {
+  width: 100%;
+}
+
+.tbl_container {
+  width: 100%;
+  height: 720px;
+  overflow-x: auto;
+}
+.tbl_container table {
+  min-width: 100%;
+  border-collapse: collapse;
+  border: 2px solid #000;
+}
+td, th{
+  border:1px solid #000;
+  text-align:center;
+  vertical-align:middle;
+  padding:10px;
+}
+.tbl_container table thead {
+  border: 2px solid #000;
+}
+.tbl_container table thead tr {
+    border: 2px solid #000;
+  text-align: left;
+  height: 45px;
+  position: sticky;
+  top: 0;
+}
+.tbl_container table thead tr th {
+  width: 600px;
+  padding: 5px 10px;
+  text-align: center;
+  border: 2px solid #000;
+  background-color: #fff;
+}
+.tbl_container table tr td {
+  border: 2px solid #000;
+}
+.tbl_container table tr td:first-child {
+  width: 15%;
+  font-size: 12px;
+  text-align: center;
+}
+.grupo-form {
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  max-width: 450px;
+  padding: 10px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 10px;
+}
+.grupo-form .nro{
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fcc701;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #000;
+}
+
+.input-group {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2px;
+  margin-right: 2px;
+}
+.input-group label {
+  font-weight: 600;
+  margin-bottom: 2px;
+  font-size: 10px;
+  color: #444;
+}
+
+select {
+  padding: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
+}
+
+#save-activities {
+  background-color: #fcc701;
+  color: #000;
+  font-weight: bold;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.input-group.date{
+  max-width: 40%;
+}
+
+.input-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #444;
+}
+
+.input-group input[type="date"] {
+  padding: 10px 12px;
+  font-size: 14px;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  background: white;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+/* hover */
+.input-group input[type="date"]:hover {
+  border-color: #3498db;
+}
+
+/* focus */
+.input-group input[type="date"]:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
+}
+
+/* icono calendario */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  filter: invert(40%);
+}
+/* responsive */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 12px;
+  }
+  .input-group {
+    max-width: 100%;
+  }
+
+  .input-group input[type="date"] {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .grupo-form {
+    max-width: 100%;
+  }
+}

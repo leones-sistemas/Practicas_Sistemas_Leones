@@ -1,0 +1,184 @@
+/* contenedor */
+
+.form-empleado{
+max-width:600px;
+margin:auto;
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* titulo */
+
+.form-empleado h2{
+    text-align: center;
+margin-bottom:25px;
+color:#2c3e50;
+font-weight:600;
+}
+
+/* grid */
+
+.form-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+}
+
+/* grupos */
+
+.form-group{
+display:flex;
+flex-direction:column;
+}
+
+.form-group label{
+font-size:14px;
+margin-bottom:6px;
+font-weight:600;
+color:#34495e;
+}
+
+.form-group input,
+.form-group select{
+    width: 100%;
+padding:10px;
+border-radius:6px;
+border:1px solid #dcdcdc;
+font-size:14px;
+}
+
+.form-group input:focus,
+.form-group select:focus{
+outline:none;
+border-color:#2c3e50;
+}
+
+/* campos completos */
+
+.full{
+grid-column:1/3;
+}
+
+/* botones */
+
+.form-buttons{
+margin-top:25px;
+display:flex;
+gap:10px;
+}
+
+.form-buttons button{
+padding:10px 18px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+font-size:14px;
+}
+
+.form-buttons button[type="submit"]{
+background:#2c3e50;
+color:white;
+}
+
+.form-buttons button[type="reset"]{
+background:#bdc3c7;
+}
+/* FOTO EMPLEADO */
+
+.photo-container{
+display:flex;
+justify-content:center;
+margin-bottom:25px;
+}
+
+.photo-preview{
+width:120px;
+height:120px;
+border-radius:50%;
+border:3px dashed #dcdcdc;
+display:flex;
+align-items:center;
+justify-content:center;
+cursor:pointer;
+overflow:hidden;
+background:#f8f9fb;
+transition:all .3s;
+position:relative;
+}
+
+.photo-preview:hover{
+border-color:#2c3e50;
+}
+
+.photo-preview span{
+font-size:12px;
+color:#888;
+text-align:center;
+padding:10px;
+}
+
+.photo-preview img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+#photoInput{
+display:none;
+}
+
+.photo-preview img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+#photoInput{
+display:none;
+}
+
+.dias-trabajo{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin-top:8px;
+}
+
+.dias-trabajo label{
+display:flex;
+align-items:center;
+justify-content:center;
+width:40px;
+height:40px;
+border-radius:8px;
+border:1px solid #ddd;
+cursor:pointer;
+font-weight:600;
+padding: 5px;
+}
+
+.dias-trabajo input{
+margin-right:4px;
+}
+/* RESPONSIVE */
+
+@media (max-width:768px){
+
+.form-grid{
+grid-template-columns:1fr;
+}
+
+.full{
+grid-column:1;
+}
+
+.form-buttons{
+flex-direction:column;
+}
+
+.form-buttons button{
+width:100%;
+}
+
+}

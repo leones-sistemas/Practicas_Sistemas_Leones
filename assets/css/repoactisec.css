@@ -1,0 +1,255 @@
+:root{
+    --color-primary:#0f172a;
+    --color-secondary:#1e293b;
+    --color-accent:#2563eb;
+    --color-border:#e2e8f0;
+    --color-bg:#f8fafc;
+    --color-text:#334155;
+    --color-success-bg:#dcfce7;
+    --color-success-text:#166534;
+    --color-white:#ffffff;
+}
+.attendance-card{
+    max-width:1600px;
+    margin:auto;
+    background:var(--color-white);
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:
+        0 20px 40px rgba(15,23,42,.08),
+        0 5px 15px rgba(15,23,42,.05);
+}
+
+/* ==========================
+   CABECERA
+========================== */
+
+.attendance-header{
+    background:linear-gradient(
+        135deg,
+        var(--color-primary),
+        var(--color-secondary)
+    );
+
+    padding:25px 35px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.attendance-title{
+    color:white;
+    font-size:1.6rem;
+    font-weight:600;
+}
+
+.attendance-badge{
+    color:white;
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(10px);
+    padding:8px 18px;
+    border-radius:30px;
+    font-size:.85rem;
+    font-weight:500;
+}
+
+/* ==========================
+   CONTENEDOR TABLA
+========================== */
+
+.attendance-table-container{
+    padding:25px;
+    overflow-x:auto;
+}
+
+/* ==========================
+   TABLA
+========================== */
+
+.attendance-table{
+    width:100%;
+    min-width:1200px;
+    border-collapse:separate;
+    border-spacing:0;
+}
+
+.attendance-thead{
+    position:sticky;
+    top:0;
+}
+
+.attendance-head-row{
+    background:var(--color-bg);
+}
+
+.attendance-th{
+    padding:18px 14px;
+    text-align:center;
+    font-size:.85rem;
+    text-transform:uppercase;
+    letter-spacing:.8px;
+    color:#64748b;
+    border-bottom:2px solid var(--color-border);
+    background:#f8fafc;
+    font-weight:600;
+}
+
+.attendance-th-worker{
+    text-align:left;
+    min-width:250px;
+}
+
+.attendance-th-date{
+    min-width:140px;
+}
+
+.attendance-th-hour{
+    min-width:100px;
+}
+
+.attendance-th-total{
+    min-width:120px;
+}
+
+.attendance-th:first-child{
+    border-top-left-radius:12px;
+}
+
+.attendance-th:last-child{
+    border-top-right-radius:12px;
+}
+
+/* ==========================
+   CUERPO TABLA
+========================== */
+
+.attendance-row{
+    transition:.25s ease;
+}
+
+.attendance-row:hover{
+    background:#f8fbff;
+}
+
+.attendance-row td{
+    border-bottom:1px solid #edf2f7;
+}
+
+.attendance-worker-cell{
+    padding:18px 14px;
+}
+
+.attendance-worker{
+    display:flex;
+    align-items:center;
+    gap:14px;
+}
+
+.attendance-avatar{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:linear-gradient(
+        135deg,
+        #3b82f6,
+        #1d4ed8
+    );
+
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:600;
+    font-size:.9rem;
+}
+
+.attendance-worker-name{
+    font-weight:600;
+    color:#1e293b;
+}
+
+.attendance-date{
+    text-align:center;
+    padding:18px 14px;
+    color:#64748b;
+    font-weight:500;
+}
+
+/* ==========================
+   HORAS
+========================== */
+
+.attendance-hour{
+    text-align:center;
+    padding:18px 10px;
+}
+
+.attendance-hour-chip{
+    display:inline-block;
+    min-width:75px;
+    padding:8px 12px;
+
+    background:#f1f5f9;
+    border:1px solid #e2e8f0;
+
+    border-radius:10px;
+
+    font-size:.9rem;
+    font-weight:500;
+
+    transition:.2s;
+}
+
+.attendance-hour-chip:hover{
+    background:#dbeafe;
+    border-color:#93c5fd;
+}
+
+/* ==========================
+   TOTAL
+========================== */
+
+.attendance-total{
+    text-align:center;
+    padding:18px 14px;
+}
+
+.attendance-total-chip{
+    display:inline-block;
+
+    padding:8px 15px;
+
+    background:var(--color-success-bg);
+    color:var(--color-success-text);
+
+    border-radius:10px;
+
+    font-weight:600;
+}
+
+
+.watchDetail{
+    cursor: pointer;
+    user-select: none;
+}
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:768px){
+
+    body{
+        padding:15px;
+    }
+
+    .attendance-header{
+        flex-direction:column;
+        gap:10px;
+        text-align:center;
+    }
+
+    .attendance-title{
+        font-size:1.2rem;
+    }
+}

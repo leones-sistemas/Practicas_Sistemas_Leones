@@ -1,0 +1,274 @@
+.panel {
+  background: #fff;
+  border-radius: 18px;
+  padding: 25px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== TITULO ===== */
+
+.titulo {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #0f172a;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 15px;
+}
+
+/* ===== FILTROS ===== */
+
+.fila {
+  display: flex;
+  gap: 20px;
+  align-items: end;
+  flex-wrap: wrap;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+}
+
+.campo label {
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.campo input {
+  height: 45px;
+  border: 1px solid #dbe2ea;
+  border-radius: 12px;
+  padding: 0 15px;
+  font-size: 14px;
+  transition: 0.25s;
+  background: #fff;
+}
+
+.campo input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+}
+
+/* ===== BOTON ===== */
+
+.btn {
+  border: none;
+  height: 45px;
+  padding: 0 25px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35);
+}
+
+/* ===== TABLA ===== */
+
+.container-results {
+  background: #fff;
+  border-radius: 18px;
+  overflow: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  max-height: 280px;
+}
+
+
+/* Scroll elegante */
+
+.container-results::-webkit-scrollbar {
+  height: 10px;
+}
+
+.container-results::-webkit-scrollbar-track {
+  background: #edf2f7;
+}
+
+.container-results::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 1200px;
+  position: relative;
+}
+/* ===== CABECERA ===== */
+
+thead th {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #fff;
+  padding: 14px;
+  font-size: 13px;
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  white-space: nowrap;
+}
+
+/* ===== CELDAS ===== */
+
+tbody td {
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 13px;
+  vertical-align: top;
+}
+
+/* ===== HOVER ===== */
+
+tbody tr {
+  transition: 0.2s;
+}
+
+tbody tr:hover {
+  background: #f8fafc;
+}
+
+/* ===== PRIMERA COLUMNA ===== */
+
+tbody td:first-child {
+  font-weight: 600;
+  color: #0f172a;
+  min-width: 250px;
+  background: #fff;
+  position: sticky;
+  left: 0;
+  z-index: 5;
+}
+
+thead th:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 20;
+}
+
+/* ===== RESUMEN FINAL ===== */
+
+tbody td:nth-last-child(4) {
+  background: #dbeafe;
+  color: #1d4ed8;
+  font-weight: 700;
+  text-align: center;
+}
+
+tbody td:nth-last-child(3) {
+  background: #fef3c7;
+  color: #92400e;
+  font-weight: 700;
+  text-align: center;
+}
+
+tbody td:nth-last-child(2) {
+  background: #fee2e2;
+  color: #b91c1c;
+  font-weight: 700;
+  text-align: center;
+}
+
+tbody td:last-child {
+  background: #dcfce7;
+  color: #166534;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* ===== ESTADO VISUAL DE DATOS ===== */
+
+tbody td {
+  line-height: 1.6;
+}
+
+tbody td strong {
+  display: inline-block;
+  margin-top: 5px;
+  padding: 3px 8px;
+  border-radius: 20px;
+  font-size: 11px;
+}
+
+tbody td strong[style*="blue"] {
+  background: #dbeafe !important;
+  color: #1d4ed8 !important;
+}
+
+tbody td strong[style*="red"] {
+  background: #fee2e2 !important;
+  color: #b91c1c !important;
+}
+
+/* ===== EFECTO TARJETAS EN CELDAS ===== */
+
+tbody td:not(:first-child) {
+  transition: 0.2s;
+}
+
+tbody tr:hover td:not(:first-child) {
+  background: rgba(37, 99, 235, 0.03);
+}
+
+/* ===== RESPONSIVE ===== */
+.table-search {
+  padding: 15px;
+  border-bottom: 1px solid #e5e7eb;
+  background: #fff;
+  position: sticky;
+  left: 0;
+}
+
+.table-search input {
+  width: 350px;
+  max-width: 100%;
+  height: 42px;
+  padding: 0 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  outline: none;
+  font-size: 14px;
+}
+
+.table-search input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+@media (max-width: 768px) {
+  .fila {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .campo {
+    min-width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .titulo {
+    font-size: 22px;
+  }
+  tbody td:first-child {
+    font-weight: 600;
+    color: #0f172a;
+    min-width: 250px;
+    background: #fff;
+    position: relative;
+    left: 0;
+    z-index: 5;
+  }
+}

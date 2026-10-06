@@ -1,0 +1,1499 @@
+/*==================================================
+=                 VARIABLES
+==================================================*/
+
+:root{
+
+    --vxsp-primario:#2563eb;
+    --vxsp-secundario:#1d4ed8;
+
+    --vxsp-verde:#16a34a;
+    --vxsp-rojo:#dc2626;
+    --vxsp-amarillo:#f59e0b;
+    --vxsp-morado:#7c3aed;
+    --vxsp-celeste:#0891b2;
+
+    --vxsp-fondo:#f4f7fb;
+
+    --vxsp-card:#ffffff;
+
+    --vxsp-texto:#1e293b;
+    --vxsp-subtexto:#64748b;
+
+    --vxsp-borde:#e5e7eb;
+
+    --vxsp-sombra:
+        0 10px 30px rgba(15,23,42,.08);
+
+}
+
+
+/*==================================================
+=               CONTENEDOR
+==================================================*/
+
+.vxsp_dashboard{
+
+    padding:30px;
+
+    background:var(--vxsp-fondo);
+
+    min-height:100vh;
+
+}
+
+
+/*==================================================
+=                 FILTROS
+==================================================*/
+
+.vxsp_filtros{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr)
+        180px;
+
+    gap:20px;
+
+    align-items:end;
+
+    background:#fff;
+
+    padding:25px;
+
+    border-radius:16px;
+
+    box-shadow:var(--vxsp-sombra);
+
+    margin-bottom:30px;
+
+
+}
+
+
+.vxsp_filtro{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+.vxsp_filtro label{
+
+    margin-bottom:8px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    color:var(--vxsp-subtexto);
+
+}
+
+
+.vxsp_filtro input,
+.vxsp_filtro select{
+
+    height:46px;
+
+    border:1px solid var(--vxsp-borde);
+
+    border-radius:10px;
+
+    padding:0 15px;
+
+    font-size:14px;
+
+    outline:none;
+
+    transition:.25s;
+
+    background:#fff;
+
+}
+
+
+.vxsp_filtro input:focus,
+.vxsp_filtro select:focus{
+
+    border-color:var(--vxsp-primario);
+
+    box-shadow:0 0 0 3px rgba(37,99,235,.15);
+
+}
+
+
+.vxsp_btn_buscar{
+
+    height:46px;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    background:linear-gradient(
+        135deg,
+        var(--vxsp-primario),
+        var(--vxsp-secundario)
+    );
+
+    color:#fff;
+
+    font-weight:600;
+
+    transition:.30s;
+
+}
+
+
+.vxsp_btn_buscar:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 10px 25px rgba(37,99,235,.25);
+
+}
+
+
+/*==================================================
+=                 KPI
+==================================================*/
+
+.vxsp_kpis{
+
+    display:grid;
+
+    grid-template-columns:repeat(6,1fr);
+
+    gap:20px;
+
+    margin-bottom:35px;
+
+}
+
+
+.vxsp_card{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:22px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    box-shadow:var(--vxsp-sombra);
+
+    transition:.30s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+.vxsp_card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:5px;
+
+    height:100%;
+
+    background:var(--vxsp-primario);
+
+}
+
+
+.vxsp_card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+
+.vxsp_icono{
+
+    width:62px;
+
+    height:62px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:#eef4ff;
+
+    color:var(--vxsp-primario);
+
+    font-size:26px;
+
+    flex-shrink:0;
+
+}
+
+
+.vxsp_card h2{
+
+    font-size:28px;
+
+    color:var(--vxsp-texto);
+
+    margin-bottom:6px;
+
+}
+
+
+.vxsp_card p{
+
+    color:var(--vxsp-subtexto);
+
+    font-size:14px;
+
+}
+
+
+/*==================================================
+=      COLORES DIFERENTES PARA CADA TARJETA
+==================================================*/
+
+.vxsp_card:nth-child(2) .vxsp_icono{
+
+    background:#ecfeff;
+    color:#0891b2;
+
+}
+
+.vxsp_card:nth-child(2)::before{
+
+    background:#0891b2;
+
+}
+
+
+.vxsp_card:nth-child(3) .vxsp_icono{
+
+    background:#fff7ed;
+    color:#f59e0b;
+
+}
+
+.vxsp_card:nth-child(3)::before{
+
+    background:#f59e0b;
+
+}
+
+
+.vxsp_card:nth-child(4) .vxsp_icono{
+
+    background:#ecfdf5;
+    color:#16a34a;
+
+}
+
+.vxsp_card:nth-child(4)::before{
+
+    background:#16a34a;
+
+}
+
+
+.vxsp_card:nth-child(5) .vxsp_icono{
+
+    background:#fef2f2;
+    color:#dc2626;
+
+}
+
+.vxsp_card:nth-child(5)::before{
+
+    background:#dc2626;
+
+}
+
+
+.vxsp_card:nth-child(6) .vxsp_icono{
+
+    background:#f3e8ff;
+    color:#7c3aed;
+
+}
+
+.vxsp_card:nth-child(6)::before{
+
+    background:#7c3aed;
+
+}
+/*==================================================
+=               GRAFICOS
+==================================================*/
+
+.vxsp_graficos{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+    margin-bottom:30px;
+
+}
+
+
+.vxsp_chart_card{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    box-shadow:var(--vxsp-sombra);
+
+    transition:.30s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+.vxsp_chart_card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:5px;
+
+    background:linear-gradient(
+        90deg,
+        var(--vxsp-primario),
+        #60a5fa
+    );
+
+}
+
+
+.vxsp_chart_card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+        0 18px 35px rgba(15,23,42,.12);
+
+}
+
+
+.vxsp_chart_card h3{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-bottom:20px;
+
+    font-size:18px;
+
+    color:var(--vxsp-texto);
+
+}
+
+
+.vxsp_chart_card h3 i{
+
+    color:var(--vxsp-primario);
+
+    font-size:18px;
+
+}
+
+
+/*==================================================
+=               CANVAS
+==================================================*/
+
+.vxsp_chart_card canvas{
+
+    width:100% !important;
+
+    height:320px !important;
+
+}
+
+
+/*==================================================
+=            PANEL EJECUTIVO
+==================================================*/
+
+.vxsp_resumen{
+
+    margin-bottom:35px;
+
+}
+
+
+.vxsp_panel_info{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:30px;
+
+    box-shadow:var(--vxsp-sombra);
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+.vxsp_panel_info::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:6px;
+
+    height:100%;
+
+    background:#16a34a;
+
+}
+
+
+.vxsp_panel_info h3{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:25px;
+
+    color:var(--vxsp-texto);
+
+    font-size:20px;
+
+}
+
+
+.vxsp_panel_info h3 i{
+
+    color:#16a34a;
+
+}
+
+
+/*==================================================
+=        ITEMS DEL RESUMEN
+==================================================*/
+
+#vxspResumen{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+}
+
+
+.vxsp_resumen_item{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:15px;
+
+    padding:18px;
+
+    border-radius:12px;
+
+    background:#f8fafc;
+
+    border:1px solid #edf2f7;
+
+    transition:.25s;
+
+}
+
+
+.vxsp_resumen_item:hover{
+
+    background:#eef4ff;
+
+    border-color:#bfdbfe;
+
+}
+
+
+.vxsp_resumen_icono{
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:#dbeafe;
+
+    color:#2563eb;
+
+    font-size:18px;
+
+    flex-shrink:0;
+
+}
+
+
+.vxsp_resumen_texto{
+
+    flex:1;
+
+}
+
+
+.vxsp_resumen_texto h4{
+
+    font-size:15px;
+
+    margin-bottom:6px;
+
+    color:#0f172a;
+
+}
+
+
+.vxsp_resumen_texto p{
+
+    color:#64748b;
+
+    line-height:1.7;
+
+    font-size:14px;
+
+}
+
+
+/*==================================================
+=             INDICADOR LATERAL
+==================================================*/
+
+.vxsp_resumen_ok{
+
+    border-left:4px solid #16a34a;
+
+}
+
+.vxsp_resumen_warning{
+
+    border-left:4px solid #f59e0b;
+
+}
+
+.vxsp_resumen_error{
+
+    border-left:4px solid #dc2626;
+
+}
+
+.vxsp_resumen_info{
+
+    border-left:4px solid #2563eb;
+
+}
+
+
+/*==================================================
+=            PEQUEÑO CONTADOR
+==================================================*/
+
+.vxsp_badge_info{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:5px 12px;
+
+    border-radius:30px;
+
+    background:#eef2ff;
+
+    color:#2563eb;
+
+    font-size:13px;
+
+    font-weight:bold;
+
+    margin-top:8px;
+
+}
+
+
+/*==================================================
+=          EFECTO DE ENTRADA
+==================================================*/
+
+.vxsp_chart_card,
+.vxsp_panel_info{
+
+    animation:vxspFade .45s ease;
+
+}
+/*==================================================
+=              PANEL TABLA
+==================================================*/
+
+.vxsp_tabla_panel{
+
+    background:#ffffff;
+
+    border-radius:18px;
+
+    padding:28px;
+
+    box-shadow:var(--vxsp-sombra);
+
+    overflow:hidden;
+
+}
+
+
+/*==================================================
+=              CABECERA
+==================================================*/
+
+.vxsp_tabla_header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:25px;
+
+    gap:20px;
+
+}
+
+
+.vxsp_tabla_header h2{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-size:22px;
+
+    color:var(--vxsp-texto);
+
+}
+
+
+.vxsp_tabla_header h2 i{
+
+    color:var(--vxsp-primario);
+
+}
+
+
+#vxspBuscarTabla{
+
+    width:340px;
+
+    height:45px;
+
+    border:1px solid var(--vxsp-borde);
+
+    border-radius:10px;
+
+    padding:0 15px;
+
+    outline:none;
+
+    transition:.25s;
+
+}
+
+
+#vxspBuscarTabla:focus{
+
+    border-color:var(--vxsp-primario);
+
+    box-shadow:0 0 0 4px rgba(37,99,235,.10);
+
+}
+
+
+/*==================================================
+=                  TABLA
+==================================================*/
+
+.vxsp_tabla{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+
+.vxsp_tabla thead{
+
+    background:#f8fafc;
+
+}
+
+
+.vxsp_tabla thead th{
+
+    padding:16px;
+
+    text-align:left;
+
+    color:#475569;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    border-bottom:2px solid #edf2f7;
+
+}
+
+
+.vxsp_tabla tbody tr{
+
+    transition:.25s;
+
+}
+
+
+.vxsp_tabla tbody tr:hover{
+
+    background:#f8fbff;
+
+}
+
+
+.vxsp_tabla tbody td{
+
+    padding:18px 16px;
+
+    border-bottom:1px solid #edf2f7;
+
+    vertical-align:middle;
+
+    color:#334155;
+
+}
+
+
+/*==================================================
+=           TITULO
+==================================================*/
+
+.vxsp_titulo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+
+.vxsp_btn_ver{
+
+    width:30px;
+
+    height:30px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#eef4ff;
+
+    color:#2563eb;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+
+.vxsp_btn_ver:hover{
+
+    background:#2563eb;
+
+    color:#fff;
+
+}
+
+
+/*==================================================
+=          PROYECTO
+==================================================*/
+
+.vxsp_proyecto{
+
+    padding:7px 14px;
+
+    border-radius:30px;
+
+    background:#eef4ff;
+
+    color:#2563eb;
+
+    font-weight:600;
+
+    display:inline-block;
+
+}
+
+
+/*==================================================
+=          RESPONSABLE
+==================================================*/
+
+.vxsp_responsable{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+
+.vxsp_avatar{
+
+    width:38px;
+
+    height:38px;
+
+    border-radius:50%;
+
+    background:#2563eb;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-weight:bold;
+
+}
+
+
+/*==================================================
+=          ESTADOS
+==================================================*/
+
+.vxsp_estado{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:7px 14px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:bold;
+
+}
+
+
+.vxsp_estado_pendiente{
+
+    background:#fff7ed;
+
+    color:#d97706;
+
+}
+
+
+.vxsp_estado_proceso{
+
+    background:#eff6ff;
+
+    color:#2563eb;
+
+}
+
+
+.vxsp_estado_culminado{
+
+    background:#ecfdf5;
+
+    color:#16a34a;
+
+}
+
+
+/*==================================================
+=          PROGRESO
+==================================================*/
+
+.vxsp_contenedor_barra{
+
+    width:180px;
+
+}
+
+
+.vxsp_barra{
+
+    height:9px;
+
+    background:#e2e8f0;
+
+    border-radius:50px;
+
+    overflow:hidden;
+
+}
+
+
+.vxsp_barra div{
+
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        #2563eb,
+        #60a5fa
+    );
+
+    border-radius:50px;
+
+}
+
+
+.vxsp_porcentaje{
+
+    margin-top:6px;
+
+    font-size:13px;
+
+    color:#64748b;
+
+}
+
+
+/*==================================================
+=            FECHA
+==================================================*/
+
+.vxsp_fecha{
+
+    color:#64748b;
+
+    font-size:13px;
+
+}
+
+
+/*==================================================
+=          PAGINACION
+==================================================*/
+
+.vxsp_paginacion{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:10px;
+
+    margin-top:30px;
+
+}
+
+
+.vxsp_btn_pagina{
+
+    width:42px;
+
+    height:42px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#f1f5f9;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    font-weight:bold;
+
+}
+
+
+.vxsp_btn_pagina:hover{
+
+    background:#dbeafe;
+
+    color:#2563eb;
+
+}
+
+
+.vxsp_btn_pagina.activo{
+
+    background:#2563eb;
+
+    color:white;
+
+}
+
+
+/*==================================================
+=          SCROLL TABLA
+==================================================*/
+
+.vxsp_tabla_panel{
+
+    overflow-x:auto;
+
+}
+
+
+.vxsp_tabla{
+
+    min-width:1100px;
+
+}
+
+/*==================================================
+=              POPUP DETALLE
+==================================================*/
+
+.vxsp_modal_detalle{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:5000;
+
+}
+
+.vxsp_modal_detalle.activo{
+
+    display:flex;
+
+}
+
+.vxsp_modal_contenido{
+
+    width:500px;
+
+    max-width:95%;
+
+    background:white;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    animation:vxspZoom .25s;
+
+}
+
+@keyframes vxspZoom{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.8);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+.vxsp_modal_header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 25px;
+
+    background:#2563eb;
+
+    color:white;
+
+}
+
+.vxsp_modal_header button{
+
+    border:none;
+
+    background:none;
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+}
+
+.vxsp_modal_body{
+
+    padding:25px;
+
+    line-height:1.8;
+
+    color:#475569;
+
+}
+.vxsp_btn_pagina:disabled{
+
+    opacity:.35;
+
+    cursor:not-allowed;
+
+}
+
+.vxsp_modal{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.3s;
+
+    z-index:9999;
+
+}
+
+
+.vxsp_modal.activo{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+
+
+.vxsp_modal_contenido{
+
+    background:white;
+
+    width:450px;
+
+    max-width:90%;
+
+    padding:25px;
+
+    border-radius:16px;
+
+    position:relative;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.2);
+
+}
+
+
+
+.vxsp_modal_contenido h3{
+
+    margin-bottom:15px;
+
+}
+
+
+
+.vxsp_modal_contenido p{
+
+    line-height:1.6;
+
+    color:#555;
+
+}
+
+
+
+.vxsp_modal_cerrar{
+
+    position:absolute;
+
+    right:15px;
+
+    top:15px;
+
+    border:none;
+
+    background:#ef4444;
+
+    color:white;
+
+    width:35px;
+
+    height:35px;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+}
+
+
+
+
+.vxsp_btn_observacion{
+
+    border:none;
+
+    background:#2563eb;
+
+    color:white;
+
+    padding:7px 12px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+}
+
+
+
+.vxsp_btn_observacion:hover{
+
+    opacity:.8;
+
+}
+
+
+
+.vxsp_sin_observacion{
+
+    color:#aaa;
+
+}
+/*==================================================
+=          RESPONSIVE
+==================================================*/
+
+@media(max-width:900px){
+
+    .vxsp_tabla_header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    #vxspBuscarTabla{
+
+        width:100%;
+
+    }
+
+}
+
+@keyframes vxspFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(18px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/*==================================================
+=            RESPONSIVE
+==================================================*/
+
+@media(max-width:1200px){
+
+    .vxsp_graficos{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+
+@media(max-width:768px){
+
+    #vxspResumen{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .vxsp_chart_card canvas{
+
+        height:260px !important;
+
+    }
+
+}
+
+/*==================================================
+=             RESPONSIVE
+==================================================*/
+
+@media(max-width:1400px){
+
+    .vxsp_kpis{
+
+        grid-template-columns:repeat(3,1fr);
+
+    }
+
+}
+
+
+@media(max-width:1000px){
+
+    .vxsp_filtros{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+
+@media(max-width:768px){
+
+    .vxsp_dashboard{
+
+        padding:18px;
+
+    }
+
+    .vxsp_filtros{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .vxsp_kpis{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
