@@ -218,7 +218,7 @@
         <div class="hero-container">
 
             <div class="hero-text">
-                <h1>Esto es una prueba desde git hub</h1>
+                <h1>Esto es una prueba desde git hub, version 2 para probar si es cache automatizado</h1>
                 <p>
                     Descubre una nueva forma de gestionar tus servicios de manera
                     rápida, segura y eficiente. Diseñado para ofrecerte la mejor experiencia.
