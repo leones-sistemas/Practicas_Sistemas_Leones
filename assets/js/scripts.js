@@ -1,4 +1,4 @@
-ruta = "https://leones.test/";
+ruta = "https://appcoinsac.com/";
 
 $(document).ready(function () {
   // Obtener contador del localStorage
