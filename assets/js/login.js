@@ -105,5 +105,5 @@ $(document).ready(function () {
 
 $(document).ready(function () {
 
-  alert("hola mundo")
+  console.log("Hola mundo, prueba de cache automatizado para cambios en git hub")
 });

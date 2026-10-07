@@ -7,6 +7,7 @@ use core\models;
 
 abstract class AViewController
 {
+
     protected string $ruta = "";
     protected array $styles = [];
     protected array $scripts = [];
@@ -19,7 +20,7 @@ abstract class AViewController
     {
         $content = "";
         foreach ($this->styles as $style) {
-            $content .= '<link rel="stylesheet" href="/assets/css/' . $style . '.css">';
+            $content .= '<link rel="stylesheet" href="'.$this->asset("/assets/css/$style.css").'">';
         }
         return $content;
     }
@@ -27,7 +28,7 @@ abstract class AViewController
     {
         $content = "";
         foreach ($this->scripts as $script) {
-            $content .= '<script src="/assets/js/' . $script . '.js"></script>';
+            $content .= '<script src="'.$this->asset("/assets/js/$script.js").'"></script>';
         }
         return $content;
     }
@@ -41,7 +42,7 @@ abstract class AViewController
             return "";
         }
     }
-    
+
     public function get_data(): array
     {
         $id = validator::userId();
@@ -59,12 +60,23 @@ abstract class AViewController
                 "puesto" => $texto,
                 "foto" => $datos["foto"]
             );
-        }else{
+        } else {
             return array(
                 "nombres" => "Administrador",
                 "sidebar" => "views/menu/sidebar.view.php"
             );
         }
+    }
+    private function asset(string $path): string
+    {
+        $path = '/' . ltrim($path, '/');
+        $file = $_SERVER['DOCUMENT_ROOT'] . $path;
+
+        if (file_exists($file)) {
+            return $path . '?v=' . filemtime($file);
+        }
+
+        return $path;
     }
     abstract public function get_body(): string;
 }
