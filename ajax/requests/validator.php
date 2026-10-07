@@ -11,7 +11,11 @@ use PDO;
 use model\database;
 use Exception;
 
-modules::varsec(".env");
+if ($_SERVER['SERVER_NAME'] === 'localhost') {
+    modules::varsec(".env");
+} else {
+    modules::varsec("../secrets/.env");
+}
 class validator
 {
     public static function validate($token): bool

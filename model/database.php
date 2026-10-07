@@ -3,7 +3,13 @@ namespace model;
 use PDO;
 use PDOException;
 use core\modules;
-modules::varsec(".env");
+if ($_SERVER['SERVER_NAME'] === 'localhost') {
+    modules::varsec(".env");
+} else {
+    modules::varsec("../secrets/.env");
+}
+
+
 class database{
     private static ?PDO $connection = null;
     private function __construct() {}

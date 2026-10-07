@@ -12,7 +12,11 @@ use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
 use core\fecha;
 
-modules::varsec(".env");
+if ($_SERVER['SERVER_NAME'] === 'localhost') {
+    modules::varsec(".env");
+} else {
+    modules::varsec("../secrets/.env");
+}
 class user
 {
     private ?PDO $pdo = null;

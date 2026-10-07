@@ -9,8 +9,11 @@ use core\models;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-
-modules::varsec(".env");
+if ($_SERVER['SERVER_NAME'] === 'localhost') {
+    modules::varsec(".env");
+} else {
+    modules::varsec("../secrets/.env");
+}
 class contratos
 {
     public function guardar(): void
