@@ -11,7 +11,7 @@ use PDO;
 use model\database;
 use Exception;
 
-if ($_SERVER['SERVER_NAME'] === 'localhost') {
+if ($_SERVER['SERVER_NAME'] === 'localhost' || $_SERVER['SERVER_NAME'] === 'leones.test') {
     modules::varsec(".env");
 } else {
     modules::varsec("../secrets/.env");

@@ -3,7 +3,7 @@ namespace model;
 use PDO;
 use PDOException;
 use core\modules;
-if ($_SERVER['SERVER_NAME'] === 'localhost') {
+if ($_SERVER['SERVER_NAME'] === 'localhost' || $_SERVER['SERVER_NAME'] === 'leones.test') {
     modules::varsec(".env");
 } else {
     modules::varsec("../secrets/.env");

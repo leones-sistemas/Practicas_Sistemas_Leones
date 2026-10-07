@@ -12,7 +12,7 @@ use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
 use core\fecha;
 
-if ($_SERVER['SERVER_NAME'] === 'localhost') {
+if ($_SERVER['SERVER_NAME'] === 'localhost' || $_SERVER['SERVER_NAME'] === 'leones.test') {
     modules::varsec(".env");
 } else {
     modules::varsec("../secrets/.env");
