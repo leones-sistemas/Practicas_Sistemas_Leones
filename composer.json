@@ -1,7 +1,7 @@
 {
-
     "require": {
+        "php": "^8.3 || ^8.4 || ^8.5",
         "phpmailer/phpmailer": "^7.0",
         "kreait/firebase-php": "^7.24"
     }
-}
+}       
